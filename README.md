@@ -52,5 +52,5 @@ print("Estimated: False, Actual:", (x == y).all())
 
 ## Limitation
 
-- If your machine has a lot of devices, TorchRNG becomes very slowly because TorchRNG uses `torch.random.folk_rng` many times. See details in [PyTorch documentation](https://pytorch.org/docs/stable/random.html).
+- If your machine has a lot of devices, TorchRNG becomes very slowly because TorchRNG uses `torch.random.fork_rng` many times. See details in [PyTorch documentation](https://pytorch.org/docs/stable/random.html).
 - Currently, the implementation of PRNGKey split is very simple and may not enough to keep randomness as much as PyTorch.
