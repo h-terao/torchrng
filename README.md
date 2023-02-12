@@ -15,7 +15,7 @@ $ pip install git+https://github.com/h-terao/torchrng
 Take the following steps to use TorchRNG.
 
 1. Create PRNG key using `torchrng.PRNGKey`.
-2. Transform stochastic functions or methods of `nn.Module` using `torchrng.deterministic`. The transformed function has a new argument `key` as the first positional argument. (See the below example.) If you specify the same PRNGKey as `key`, the transformed function will return same results.
+2. Transform stochastic callable object (i.e., functions or class methods) using `torchrng.deterministic`. The transformed function has a new argument `key` as the first positional argument. (See the below example.) If you specify the same PRNGKey as `key`, the transformed function will return same results.
 3. If you need multiple PRNGKey, split PRNGKey using `torchrng.split`.
 
 This is the short demo code of TorchRNG.
